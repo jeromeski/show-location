@@ -16,13 +16,18 @@ export default function LocationForm({ handleChange, data, onSetTag }) {
         </div>
       </div>
       <div className="form-group">
-        <textarea
-          name="textarea"
+        <input
+          name="code"
           value={data}
           onChange={handleChange}
           placeholder="Paste code here."
         />
-        <button onClick={onSetTag}>📍 Set Map</button>
+        <button onClick={onSetTag}>
+          <span role="img" aria-label="location-pin">
+            📍
+          </span>{" "}
+          Set Map
+        </button>
       </div>
     </Fragment>
   );
